@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support Book</title>
+  <meta name="description" content="Who's on Android support duty this week?" />
+  <link rel="icon" href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-orbs" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <main class="app">
+    <header class="header">
+      <p class="eyebrow">Android team · Support rotation</p>
+      <h1>Who's on duty?</h1>
+      <p class="week">
+        <span id="weekTag" class="week-tag">This week</span>
+        <span id="weekRange" class="week-range"></span>
+      </p>
+    </header>
+
+    <section class="stage-wrap">
+      <button class="nav prev" id="prevBtn" aria-label="Previous week">&#8249;</button>
+      <div class="stage" id="stage" aria-live="polite"></div>
+      <button class="nav next" id="nextBtn" aria-label="Next week">&#8250;</button>
+    </section>
+
+    <p class="duty-line">
+      <span id="dutyVerb">On duty</span>: <strong id="dutyName"></strong>
+    </p>
+
+    <button class="today-btn" id="todayBtn" hidden>&#8634; Back to this week</button>
+
+    <section class="upcoming">
+      <h2>Coming up</h2>
+      <ol id="upcoming"></ol>
+    </section>
+
+    <footer class="footer">
+      Use &larr; &rarr; keys, swipe, or click an avatar to browse weeks.
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
